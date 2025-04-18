@@ -15,8 +15,8 @@
   <section class="hero">
     <div class="hero-content">
       <img src="images/fevita.jpg" alt="Fevita" class="profile-pic">
-      <h1>Fevita</h1>
-      <p class="tagline">Coding by Day, Singing by Night</p>
+      <!-- Replace the hero section <h1> and <p> with: -->
+      <h1 id="dynamic-text"></h1>
       <div class="scroll-down">
         <i class="fas fa-chevron-down"></i>
       </div>
@@ -66,5 +66,13 @@
 
   <!-- JavaScript -->
   <script src="script.js"></script>
+
+  <!-- Add this in <body> -->
+<button id="surpriseBtn" class="surprise-btn">
+    <i class="fas fa-magic"></i> Surprise Mode
+  </button>
+  
+  <!-- Add this before </body> -->
+  <audio id="song" src="music/snippet.mp3"></audio> <!-- Upload a short MP3 to /music -->
 </body>
 </html>

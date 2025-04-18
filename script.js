@@ -31,5 +31,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
     fadeInOnScroll();
   });
+
+  // Add to script.js
+document.getElementById('surpriseBtn').addEventListener('click', () => {
+    document.body.classList.toggle('concert-mode');
+    document.getElementById('song').play();
+  });
+
+
+// Typing animation
+const phrases = ["Fevita", "Coder", "Singer", "Creator"];
+let i = 0, j = 0;
+let currentPhrase = [];
+
+function type() {
+  if (i < phrases.length) {
+    if (j < phrases[i].length) {
+      currentPhrase.push(phrases[i][j]);
+      document.getElementById('dynamic-text').innerHTML = currentPhrase.join('') + '<span class="blink">|</span>';
+      j++;
+      setTimeout(type, 150);
+    } else {
+      setTimeout(erase, 1000);
+    }
+  }
+}
+
+function erase() {
+  if (j > 0) {
+    currentPhrase.pop();
+    document.getElementById('dynamic-text').innerHTML = currentPhrase.join('') + '<span class="blink">|</span>';
+    j--;
+    setTimeout(erase, 50);
+  } else {
+    i = (i + 1) % phrases.length;
+    setTimeout(type, 500);
+  }
+}
+
+type();
   
   window.addEventListener('scroll', fadeInOnScroll);
