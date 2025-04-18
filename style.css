@@ -1,0 +1,138 @@
+/* Global Styles */
+:root {
+    --lavender: #E2D1F9;
+    --charcoal: #333333;
+    --blush: #FFD6E0;
+    --white: #ffffff;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--charcoal);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  section {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--lavender) 0%, var(--blush) 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--charcoal);
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .scroll-down {
+    margin-top: 30px;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+  }
+  
+  /* About Section */
+  .about {
+    background: var(--white);
+  }
+  
+  .bio {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+  
+  /* Skills Section */
+  .skills {
+    background: #f9f9f9;
+  }
+  
+  .skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .skill-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .skill-card i {
+    font-size: 2.5rem;
+    color: var(--lavender);
+    margin-bottom: 15px;
+  }
+  
+  /* Contact Section */
+  .contact {
+    background: var(--white);
+  }
+  
+  .social-links {
+    margin-top: 30px;
+  }
+  
+  .social-icon {
+    color: var(--charcoal);
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: var(--blush);
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .skills-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
